@@ -1,0 +1,85 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.container{
+	width:80%;
+	margin:auto;
+}
+.port-head{
+	padding:10px;
+}
+.port-head h4{
+	color:#aaa;
+	display:inline-block;
+	padding:10px;
+}
+.port-head h4::after{
+	content:"";
+	width:6rem;
+	height:2px;
+	background-color:#ffc451;
+	display:inline-block;
+	margin:4px 10px;
+}
+/* .port-head p{ */
+	/* font-size:36px; */
+	/* font-weight:700; */
+/* } */
+.port-row{
+	display:flex;
+	flex-wrap:wrap;
+}
+/* .port-col{ */
+	/* width:33.33%; */
+/* } */
+.port-card{
+	padding:10px;
+}
+.port-img{
+	position:relative;
+	overflow:hidden;
+}
+.port-card img{
+	width:100%;
+	transform:scale(1);
+}
+.port-cnt{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:rgba(0,0,0,0.4);
+	color:#fff;
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	padding:15px;
+	opacity:0;
+}
+.port-cnt p, .port-cnt h3{
+	padding:5px;
+}
+.port-cnt p{
+	font-size:12px;
+	opacity:0.7;
+}
+.port-cnt a{
+	padding:5px;
+	font-size:28px;
+	text-decoration:none;
+	color:#fff;
+}
+.port-cnt a:hover{
+	color:#ffc451;
+}
+.port-card:hover .port-cnt{
+	opacity:1;
+	transition:all 0.8s ease;
+}
+.port-card:hover .port-img img{
+	transform:scale(1.1);
+	transition:transform 0.5s ease;
+}
